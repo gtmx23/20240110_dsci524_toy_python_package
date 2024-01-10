@@ -21,3 +21,5 @@ def count_words(input_file):
     text = clean_text(text)
     words = text.split()
     return Counter(words)
+
+# To run: from pycounts_toy_python_524.pycounts_toy_python_524 import count_words
