@@ -1,6 +1,6 @@
 # pycounts_toy_python_524
 
-A package based on the pycounts tutorial, as part of DSCI 524 Individual Assignment
+A package based on the pycounts tutorial, as part of DSCI 524 Individual Assignment.
 
 ## Installation
 
@@ -9,8 +9,19 @@ $ pip install pycounts_toy_python_524
 ```
 
 ## Usage
+`pycounts_toy_python_524` can be used to count words in a text file and plot results
+as follows:
 
-- TODO
+```python
+from pycounts_toy_python_524.pycounts_toy_python_524 import count_words
+from pycounts_toy_python_524.plotting import plot_words
+import matplotlib.pyplot as plt
+
+file_path = "test.txt"  # path to your file
+counts = count_words(file_path)
+fig = plot_words(counts, n=10)
+plt.show()
+```
 
 ## Contributing
 
