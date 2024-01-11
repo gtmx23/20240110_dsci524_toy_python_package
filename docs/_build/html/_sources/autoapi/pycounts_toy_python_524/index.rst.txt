@@ -1,0 +1,23 @@
+:py:mod:`pycounts_toy_python_524`
+=================================
+
+.. py:module:: pycounts_toy_python_524
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   plotting/index.rst
+   pycounts_toy_python_524/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
+   
+
