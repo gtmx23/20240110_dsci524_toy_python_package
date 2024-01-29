@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pycounts_toy_python_524"
-version = "0.1.0"
+version = "0.1.1"
 description = "A package based on the pycounts tutorial, as part of DSCI 524 Individual Assignment"
 authors = ["Gretel Tan"]
 license = "MIT"
