@@ -71,20 +71,20 @@ jobs:
         if: steps.release.outputs.released == 'true'
         with:
           repository-url: https://test.pypi.org/legacy/
-          password: {% raw %}$pypi-AgENdGVzdC5weXBpLm9yZwIkYzY1MGY3ZWEtYWEyYS00ODVlLWI5MDYtMDQ4YjllZmRhNjJjAAIqWzMsImZkYWQxZWRiLWFlNzctNDM5MC1iYTYxLWI4ZDk1MTdiYzJjNyJdAAAGIH7gTtSvq8OUJ6F8DV1GdIHruQ8yam7hog0CzNlEWYfN{% endraw %}
+          password: {% raw %}${{ secrets.TEST_PYPI_API_TOKEN }}{% endraw %}
 
       - name: Test install from TestPyPI
         run: |
             pip install \
             --index-url https://test.pypi.org/simple/ \
             --extra-index-url https://pypi.org/simple \
-            {{ cookiecutter.__package_slug }}
+            pycounts_toy_python_524
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         if: steps.release.outputs.released == 'true'
         with:
-          password: {% raw %}$pypi-AgEIcHlwaS5vcmcCJGI0M2M3ZDdhLTAyZjYtNGM2YS04ZWM2LTEzYTJlNTcwMTBhNwACKlszLCIzZTllZmE2Mi1hNTY5LTRhZTAtOGE1NC1jNDFhZTA5ODE0MGMiXQAABiDOA0T0BBTPPZHeBjiU5b0zaPin0m7gJE4s_IOIr_eq8Q{% endraw %}
+          password: {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
 
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@main
